@@ -47,3 +47,16 @@ const interviewAnswer = (topic) => {
 };
 
 // Day 3
+// Remember, the possible candidates are: Tim, Sally, and Beth (in that order)
+const castVote = (name, votes) => {
+  // Check to see who the votes are for (note ++ works as well)
+  
+  if (name === "Tim") { votes[0]+=1; }
+  
+  if (name === "Sally") { votes[1]+=1; }
+
+  if (name === "Beth") { votes[2]+=1; }
+
+  // Return the votes
+  return (votes);
+};
