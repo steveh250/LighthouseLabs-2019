@@ -42,6 +42,20 @@
         'Jane Janesford'
       ]
 
+      const interviews = [
+      'smart city', 
+      'rebuild the lighthouse', 
+      'arts funding', 
+      'transportation',
+      'arts funding', 
+      'rebuild the lighthouse', 
+      'sports funding', 
+      'tax cuts', 
+      'smart city',
+      'arts funding', 
+      'smart city'
+    ]
+
 // Day 1
 
  const doorToDoor = (volunteers, neighbourhoods) => {
@@ -120,4 +134,37 @@ const voterTurnout = (voter_signatures, voter_ids) => {
   // They must comntain different strings
   return "FRAUD!";
   
+};
+
+// Day 7
+const termTopics = (interviews) => {
+  //Array to capture the topics
+    let topicList = [];
+    
+  // Setup the array
+  topicList.push([0]); // smart city
+  topicList.push([0]); // art funding
+  topicList.push([0]); // transportation
+
+  // Loop through the array and count the topics
+  for (var i=0; i < interviews.length; i++) {
+    
+    // Smart City
+    if (interviews[i] === "smart city") {
+      topicList[0]++;
+    }
+
+    // Arts funding
+    if (interviews[i] === "arts funding") {
+      topicList[1]++;
+    }
+  
+  // Transportation
+    if (interviews[i] === "transportation") {
+      topicList[2]++;
+    }
+  }
+  
+  // Finished processing so return the array
+  return topicList;
 };
