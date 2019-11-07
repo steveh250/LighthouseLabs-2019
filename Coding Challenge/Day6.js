@@ -26,6 +26,22 @@
       1 // Beth
     ]
 
+    const voter_signatures = [
+        'Bill Billiamson',
+        'Kate Etak',
+        'Brandon Brandonus',
+        'Fake McFakerson',
+        'Jane Janesford'
+      ]
+
+      const voter_ids = [
+        'Bill Billiamson',
+        'Kate Etak',
+        'Brandon Brandonus',
+        'Simon Simonson',
+        'Jane Janesford'
+      ]
+
 // Day 1
 
  const doorToDoor = (volunteers, neighbourhoods) => {
