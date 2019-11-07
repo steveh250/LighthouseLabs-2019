@@ -26,6 +26,13 @@
       1 // Beth
     ]
 
+
+ const stations = [
+      ['Big Bear Donair', 10, 'restaurant'],
+      ['Bright Lights Elementary', 50, 'school'],
+      ['Moose Mountain Community Centre', 45, 'community centre']
+    ];
+    
 // Day 1
 
  const doorToDoor = (volunteers, neighbourhoods) => {
@@ -76,3 +83,18 @@ for( var i = 0; i < unregisteredVoters.length; i++){
 };
 
 // Day 5
+const chooseStations = (stations) => {
+  // Array to store statsions we find
+  let goodStations = [];
+  
+  // Identify stations >= 20 that are schools or community centers 
+  for (var i=0; i < stations.length; i++) {
+    if (stations[i][1] >= 20 && (stations[i][2] === "school" || stations[i][2] === "community centre")) {
+      // Add the station to the array
+      goodStations.push(stations[i][0]);
+    }
+  }
+  
+  // Lets return the array of good stations
+  return(goodStations);
+};

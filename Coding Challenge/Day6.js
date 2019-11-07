@@ -76,3 +76,32 @@ for( var i = 0; i < unregisteredVoters.length; i++){
 };
 
 // Day 5
+const chooseStations = (stations) => {
+  // Array to store statsions we find
+  let goodStations = [];
+  
+  // Identify stations >= 20 that are schools or community centers 
+  for (var i=0; i < stations.length; i++) {
+    if (stations[i][1] >= 20 && (stations[i][2] === "school" || stations[i][2] === "community centre")) {
+      // Add the station to the array
+      goodStations.push(stations[i][0]);
+    }
+  }
+  
+  // Lets return the array of good stations
+  return(goodStations);
+};
+
+// Day 6
+const voterTurnout = (voter_signatures, voter_ids) => {
+  
+  // Check Array lengths
+  if (voter_signatures.length !== voter_ids.length) return false;
+  
+  // Lengths are the same so lets compare the contents
+  if (JSON.stringify(voter_signatures) == JSON.stringify(voter_ids)) return "All clear, we can count the votes!";
+  
+  // They must comntain different strings
+  return "FRAUD!";
+  
+};
